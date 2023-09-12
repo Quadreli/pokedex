@@ -11,7 +11,17 @@ body {
    height: 100vh;
    width: 100vw;
    padding: 1rem;
-   background-color: #fff;
+   background-color:gainsboro;
+  
+}
+
+.content .bannerPokedex {
+   max-width: 100%;
+   height: 100;
+   display: flex;
+   justify-content: center; /* Centraliza horizontalmente */
+   align-items: center; /* Centraliza verticalmente */
+
 }
 
 @media screen and (min-width: 992px) {

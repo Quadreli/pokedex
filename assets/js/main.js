@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+         <li class="pokemon ${pokemon.type}" onclick="getPokemon(${pokemon.number})">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -42,7 +42,7 @@ loadMoreButton.addEventListener('click', () => {
 
     //     loadMoreButton.parentElement.removeChild(loadMoreButton) //remove o botao
     // } else{
-        loadPokemonItens(offset, limit) //
+        loadPokemonItens(offset, limit) 
     // }
 
 }) 

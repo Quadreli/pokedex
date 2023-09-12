@@ -1,7 +1,7 @@
 
 const pokeApi = {}
 
-function convertPokeApiDetailToPokemon(pokeDetail) {
+function convertPokeApiDetailToPokemon(pokeDetail) { // Esta função recebe um objeto contendo detalhes de um Pokémon da PokeAPI e converte esses detalhes em um objeto do tipo Pokemon. Os detalhes incluem o número do Pokémon, nome, tipos e a URL da imagem. A função retorna um objeto Pokemon com essas informações.
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
@@ -18,9 +18,9 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 }
 
 
-pokeApi.getPokemonDetail = (pokemon) => {
+pokeApi.getPokemonDetail = (pokemon) => {   
     return fetch(pokemon.url)
-            .then((response) => response.json()) //transformando a lista em uma lista de promises do detalhe do pokemon convertendo pra json
+            .then((response) => response.json()) 
             .then(convertPokeApiDetailToPokemon)
 }           
 
